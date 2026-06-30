@@ -85,7 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
-        bubble.textContent = text;
+        if (sender === 'system' && typeof marked !== 'undefined') {
+            bubble.innerHTML = marked.parse(text);
+        } else {
+            bubble.textContent = text;
+        }
         
         msgDiv.appendChild(avatar);
         msgDiv.appendChild(bubble);

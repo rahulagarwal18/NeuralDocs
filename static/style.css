@@ -211,6 +211,27 @@ body {
     border-color: var(--accent);
 }
 
+.bubble p {
+    margin-bottom: 0.5rem;
+}
+
+.bubble p:last-child {
+    margin-bottom: 0;
+}
+
+.bubble ul, .bubble ol {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.bubble strong {
+    color: var(--accent);
+}
+
+.message.user .bubble strong {
+    color: white;
+}
+
 /* Input Area */
 .input-area {
     padding: 1.5rem 2rem;
