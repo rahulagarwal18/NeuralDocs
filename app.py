@@ -80,7 +80,7 @@ def upload_file():
             global global_llm, global_retriever
             global_llm = ChatGroq(
                 temperature=0, 
-                model_name="llama3-70b-8192", 
+                model_name="llama-3.3-70b-versatile", 
                 groq_api_key=GROQ_API_KEY
             )
             global_retriever = vector_store.as_retriever()
