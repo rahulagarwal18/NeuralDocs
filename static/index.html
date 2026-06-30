@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralDocs | AI RAG Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Upload & Status -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <span class="pulse"></span>
+                <h2>NeuralDocs</h2>
+            </div>
+            
+            <div class="upload-zone" id="dropZone">
+                <div class="upload-icon">📄</div>
+                <p>Drag & Drop PDF or <span>Browse</span></p>
+                <input type="file" id="fileInput" accept="application/pdf" hidden>
+            </div>
+            
+            <div class="status-box" id="statusBox">
+                <h3>System Status</h3>
+                <p id="statusText">Awaiting document...</p>
+                <div class="progress-bar"><div class="progress" id="progressFill"></div></div>
+            </div>
+            
+            <div class="architecture-info">
+                <h3>Architecture</h3>
+                <ul>
+                    <li>✅ FAISS Vector DB</li>
+                    <li>✅ Semantic Chunking</li>
+                    <li>✅ Mock LLM Responder</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area glass-panel">
+            <div class="chat-header">
+                <h2>Document Analysis Session</h2>
+            </div>
+            
+            <div class="chat-history" id="chatHistory">
+                <div class="message system">
+                    <div class="avatar">🧠</div>
+                    <div class="bubble">Welcome to NeuralDocs. Upload a PDF document to begin the Retrieval-Augmented Generation (RAG) analysis.</div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="chatInput" placeholder="Ask a question about the document..." disabled>
+                <button id="sendBtn" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
