@@ -8,4 +8,4 @@ sentence-transformers==2.7.0
 faiss-cpu==1.8.0
 pypdf==4.2.0
 python-dotenv==1.0.1
-gunicorn==22.0.0
+gunicorn==26.0.0
