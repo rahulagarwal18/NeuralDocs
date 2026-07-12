@@ -24,6 +24,20 @@ Users can upload complex, massive PDF documents (such as legal contracts or rese
 
 ---
 
+## System Architecture
+
+```mermaid
+graph LR
+    A[Raw Documents] --> B[Document Loader]
+    B --> C[Chunking & Splitting]
+    C --> D[Embedding Model]
+    D --> E[(Vector Database)]
+    F[User Query] --> G[Query Embedding]
+    G --> E
+    E -->|Retrieve Top K| H[LLM Synthesis]
+    H --> I[Final Answer]
+```
+
 ## ✨ Key Features
 
 - 📄 **PDF Text Extraction**: Safely parses and cleans raw text from massive PDF documents.
